@@ -110,15 +110,6 @@ class Item {
         item.prepend(this);
     }
 
-    remove() {
-        if (this.prev) {
-            this.prev.next = this.next;
-        }
-        if (this.next){
-            this.next.prev = this.prev;
-        }
-    }
-
 }
 
 

@@ -139,6 +139,36 @@ class List {
 
     }
 
+    removeItem(item) {
+
+        if (item instanceof Item) {
+
+            if (item.prev) {
+                item.prev.next = item.next;
+            } else {
+                this.head = item.next;
+            }
+
+            if (item.next){
+                item.next.prev = item.prev;
+            } else {
+                this.tail = item.prev;
+            }
+
+        }
+
+    }
+
+    removeByIndex(idx) {
+
+        const item = this.getItemByIndex(idx);
+
+        if (item) {
+            this.removeItem(item);
+        }
+
+    }
+
 }
 
 

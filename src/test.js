@@ -33,7 +33,8 @@ while ((item = iterator2.next()) !== null) {
 
 console.log(`size: ${list.size}`);
 
-i3.remove();
+list.removeByIndex(1);
 
 console.log(`size: ${list.size}`);
 
+list.toArray().map((i) => console.log(`map item value:${i.data}`));
